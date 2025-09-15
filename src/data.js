@@ -144,16 +144,16 @@ import Sertifikat2 from '/assets/proyek/anggact-dicoding.pdf'
 import Sertifikat3 from '/assets/proyek/anggact-kecamatan.pdf'
 import Sertifikat4 from '/assets/proyek/anggact-dishub.pdf'
 import Sertifikat5 from '/assets/proyek/anggact-cifo.pdf'
-import Sertifikat6 from '/assets/proyek/anggact-pisikotes.pdf'
-import Sertifikat7 from '/assets/proyek/junior-mobile.pdf'
-import Sertifikat8 from '/assets/proyek/junior-web.pdf'
+import Sertifikat6 from '/assets/proyek/Junior-office.pdf'
+import Sertifikat7 from '/assets/proyek/junior-web.pdf'
+import Sertifikat8 from '/assets/proyek/junior-mobile.pdf'
 
 import ser1 from '/assets/proyek/serti1.png'
 import ser2 from '/assets/proyek/serti2.png'
 import ser3 from '/assets/proyek/serti3.png'
 import ser4 from '/assets/proyek/serti4.png'
 import ser5 from '/assets/proyek/serti5.png'
-import ser6 from '/assets/proyek/serti6.png'
+import ser6 from '/assets/proyek/serti6.jpg'
 import ser7 from '/assets/proyek/serti7.png'
 import ser8 from '/assets/proyek/serti8.png'
 export const listSertifikatImage = [
@@ -215,9 +215,9 @@ export const listSertifikat = [
   {
     id: 6,
     gambar: Sertifikat6,
-    thumbnail: '/assets/proyek/serti6.png',
-    nama: 'Sertifikat Psikotest',
-    tanggal: '2027-10-07',
+    thumbnail: '/assets/proyek/serti6.jpg',
+    nama: 'Sertifikat Junior Office',
+    tanggal: '2025-01-22',
     dad: '700',
     tipe: 'pdf',
   },
@@ -225,8 +225,8 @@ export const listSertifikat = [
     id: 7,
     gambar: Sertifikat7,
     thumbnail: '/assets/proyek/serti7.png',
-    nama: 'Sertifikat Junior Mobile',
-    tanggal: '2024-05-20',
+    nama: 'Sertifikat Junior Web Developer',
+    tanggal: '2025-03-07',
     dad: '800',
     tipe: 'pdf',
   },
@@ -234,8 +234,8 @@ export const listSertifikat = [
     id: 8,
     gambar: Sertifikat8,
     thumbnail: '/assets/proyek/serti8.png',
-    nama: 'Sertifikat Junior Web',
-    tanggal: '2024-05-20',
+    nama: 'Sertifikat Junior Mobile Developer',
+    tanggal: '2025-06-25',
     dad: '900',
     tipe: 'pdf',
   },
