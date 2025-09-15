@@ -145,6 +145,8 @@ import Sertifikat3 from '/assets/proyek/anggact-kecamatan.pdf'
 import Sertifikat4 from '/assets/proyek/anggact-dishub.pdf'
 import Sertifikat5 from '/assets/proyek/anggact-cifo.pdf'
 import Sertifikat6 from '/assets/proyek/anggact-pisikotes.pdf'
+import Sertifikat7 from '/assets/proyek/anggact-junior-web.pdf'
+import Sertifikat8 from '/assets/proyek/anggact-junior-mobile.pdf'
 
 import ser1 from '/assets/proyek/serti1.png'
 import ser2 from '/assets/proyek/serti2.png'
@@ -152,6 +154,8 @@ import ser3 from '/assets/proyek/serti3.png'
 import ser4 from '/assets/proyek/serti4.png'
 import ser5 from '/assets/proyek/serti5.png'
 import ser6 from '/assets/proyek/serti6.png'
+import ser7 from '/assets/proyek/serti7.png'
+import ser8 from '/assets/proyek/serti8.png'
 export const listSertifikatImage = [
   { id: 1, gambar: ser1 },
   { id: 2, gambar: ser2 },
@@ -159,6 +163,8 @@ export const listSertifikatImage = [
   { id: 4, gambar: ser4 },
   { id: 5, gambar: ser5 },
   { id: 6, gambar: ser6 },
+  { id: 7, gambar: ser7 },
+  { id: 8, gambar: ser8 },
 ]
 export const listSertifikat = [
   {
@@ -219,8 +225,8 @@ export const listSertifikat = [
     id: 7,
     gambar: Sertifikat7,
     thumbnail: '/assets/proyek/serti7.png',
-    nama: 'Sertifikat Junior Mobile Developer',
-    tanggal: '2025-06-25',
+    nama: 'Sertifikat Junior Web',
+    tanggal: '2024-06-30',
     dad: '800',
     tipe: 'pdf',
   },
@@ -228,8 +234,8 @@ export const listSertifikat = [
     id: 8,
     gambar: Sertifikat8,
     thumbnail: '/assets/proyek/serti8.png',
-    nama: 'Sertifikat Junior Web Developer',
-    tanggal: '2025-03-07',
+    nama: 'Sertifikat Junior Mobile',
+    tanggal: '2024-06-30',
     dad: '900',
     tipe: 'pdf',
   },
