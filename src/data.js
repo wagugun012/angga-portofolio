@@ -215,6 +215,24 @@ export const listSertifikat = [
     dad: '700',
     tipe: 'pdf',
   },
+  {
+    id: 7,
+    gambar: Sertifikat7,
+    thumbnail: '/assets/proyek/serti7.png',
+    nama: 'Sertifikat Junior Mobile Developer',
+    tanggal: '2025-06-25',
+    dad: '800',
+    tipe: 'pdf',
+  },
+  {
+    id: 8,
+    gambar: Sertifikat8,
+    thumbnail: '/assets/proyek/serti8.png',
+    nama: 'Sertifikat Junior Web Developer',
+    tanggal: '2025-03-07',
+    dad: '900',
+    tipe: 'pdf',
+  },
 ]
 
 // Project data
