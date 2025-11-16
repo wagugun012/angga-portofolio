@@ -1,14 +1,15 @@
-import HeroImage from '/assets/hero_angga.png'
+import HeroImage from '/assets/act1.png'
+import HeadImage from '/assets/hero_angga.png'
 
 const Image = {
   HeroImage,
+  HeadImage,
 }
 
 export default Image
 
 import Tools1 from '/assets/tools/vscode.png'
 import Tools2 from '/assets/tools/reactjs.png'
-import Tools3 from '/assets/tools/nextjs.png'
 import Tools4 from '/assets/tools/tailwind.png'
 import Tools5 from '/assets/tools/bootstrap.png'
 import Tools6 from '/assets/tools/js.png'
@@ -22,6 +23,9 @@ import Tools13 from '/assets/tools/github.png'
 import Tools14 from '/assets/tools/ai.png'
 import Tools15 from '/assets/tools/canva.png'
 import Tools16 from '/assets/tools/figma.png'
+import Tools17 from '/assets/tools/winbox.png'
+import Tools18 from '/assets/tools/nmap.png'
+import Tools19 from '/assets/tools/ip-scanner.png'
 
 export const listTools = [
   {
@@ -37,13 +41,6 @@ export const listTools = [
     nama: 'React JS',
     ket: 'Framework',
     dad: '200',
-  },
-  {
-    id: 3,
-    gambar: Tools3,
-    nama: 'Next JS',
-    ket: 'Framework',
-    dad: '300',
   },
   {
     id: 4,
@@ -135,6 +132,27 @@ export const listTools = [
     nama: 'Figma',
     ket: 'Design App',
     dad: '1600',
+  },
+  {
+    id: 17,
+    gambar: Tools17,
+    nama: 'Winbox',
+    ket: 'Network App',
+    dad: '1700',
+  },
+  {
+    id: 18,
+    gambar: Tools18,
+    nama: 'Nmap',
+    ket: 'Network App',
+    dad: '1800',
+  },
+  {
+    id: 19,
+    gambar: Tools19,
+    nama: 'IP Scanner',
+    ket: 'Network App',
+    dad: '1900',
   },
 ]
 

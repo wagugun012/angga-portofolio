@@ -9,7 +9,7 @@ function App() {
       {/* ============================================= */}
       {/* HERO SECTION */}
       {/* ============================================= */}
-      <section className="hero grid grid-cols-1 md:grid-cols-2 items-center min-h-screen gap-10 xl:gap-0 px-6 md:px-12 lg:px-24">
+      <section className="hero grid grid-cols-1 md:grid-cols-2 items-center min-h-screen gap-10 xl:gap-0 px-6 md:px-12 lg:px-24 mt-20">
         {/* Left Side: Text Content */}
         <div className="animate__animated animate__fadeInUpBig animate__delay-3s">
           <div className="flex items-center gap-3 mb-8 bg-zinc-800/80 w-fit p-4 rounded-2xl shadow-lg backdrop-blur-sm">
@@ -20,14 +20,14 @@ function App() {
               loading="lazy"
             />
             <q className="text-zinc-200 italic">
-              Saya seorang mahasiswa akhir Manajemen Informatika
+              Hello, World! Siap untuk tantangan digital selanjutnya
             </q>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-zinc-100">
             Hi, Saya <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-500">Angga Cipta Triyana</span>
           </h1>
           <p className="text-base mb-8 opacity-80 leading-relaxed text-zinc-300 max-w-lg">
-            Seorang <span className="text-teal-400 font-semibold">Frontend Developer</span> yang 
+            Seorang <span className="text-teal-400 font-semibold">programmer</span> yang 
             passionate dalam membangun antarmuka pengguna yang elegan dan fungsional, 
             serta tertarik dengan pengembangan alat berbasis mikrokontroler.
           </p>
@@ -66,7 +66,7 @@ function App() {
           <div className="relative">
             <div className="absolute -inset-4 bg-teal-500/20 rounded-3xl blur-xl"></div>
             <img
-              src={DataImage.HeroImage}
+              src={DataImage.HeadImage}
               alt="Hero"
               className="relative w-[280px] md:w-[380px] rounded-2xl shadow-2xl animate__animated animate__fadeInUpBig animate__delay-4s border-2 border-teal-500/30"
               loading="lazy"
@@ -86,7 +86,7 @@ function App() {
           className="text-lg md:text-xl font-semibold"
         >
           <span className="mx-12 text-teal-300">Frontend Developer</span>
-          <span className="mx-12 text-teal-300">UI/UX Designer</span>
+          <span className="mx-12 text-teal-300">UI Designer</span>
           <span className="mx-12 text-teal-300">Fullstack Developer</span>
           <span className="mx-12 text-teal-300">Microcontroller Developer</span>
           <span className="mx-12 text-teal-300">Backend Developer</span>
@@ -124,19 +124,19 @@ function App() {
                 </div>
                 <div className="text-center sm:text-left">
                   <h3 className="text-xl sm:text-2xl font-bold text-zinc-100">Angga Cipta Triyana</h3>
-                  <p className="text-zinc-300 mt-1">Frontend Developer</p>
+                  <p className="text-zinc-300 mt-1">Programmer</p>
                   <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-3">
                     <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-xs font-medium">React</span>
-                    <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-xs font-medium">Next.js</span>
+                    <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-xs font-medium">PHP</span>
                     <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-xs font-medium">UI Design</span>
                   </div>
                 </div>
               </div>
               <div className="space-y-4 text-zinc-300">
                 <p className="flex items-center gap-3 text-sm sm:text-base"><i className="ri-mail-line text-teal-400"></i>anggacipta32@gmail.com</p>
-                <p className="flex items-center gap-3 text-sm sm:text-base"><i className="ri-phone-line text-teal-400"></i>+62 812 3456 7890</p>
-                <p className="flex items-center gap-3 text-sm sm:text-base"><i className="ri-map-pin-line text-teal-400"></i>Bandung, Indonesia</p>
-                <p className="flex items-center gap-3 text-sm sm:text-base"><i className="ri-github-line text-teal-400"></i>github.com/angga</p>
+                <p className="flex items-center gap-3 text-sm sm:text-base"><i className="ri-phone-line text-teal-400"></i>+62 877 0853 8381</p>
+                <p className="flex items-center gap-3 text-sm sm:text-base"><i className="ri-map-pin-line text-teal-400"></i>Jl. H. Sarkawi No. 119, RT 05/RW 06, Cimeunyan, Kab. Bandung</p>
+                <p className="flex items-center gap-3 text-sm sm:text-base"><i className="ri-github-line text-teal-400"></i>https://github.com/wagugun012</p>
               </div>
             </div>
           </div>
@@ -152,11 +152,11 @@ function App() {
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-teal-400">Manajemen Informatika</h3>
-                    <p className="text-zinc-300 mt-1">Politeknik LP3I, Bandung</p>
+                    <p className="text-zinc-300 mt-1">Politeknik LP3I Bandung | IPK: 3.45</p>
                   </div>
-                  <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">2022 - Sekarang</span>
+                  <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">2022 - 2025</span>
                 </div>
-                <p className="text-zinc-400 mt-3 text-sm">Mahasiswa tingkat akhir dengan fokus pada pengembangan web dan sistem informasi.</p>
+                <p className="text-zinc-400 mt-3 text-sm">Saya telah menyelesaikan pendidikan Manajemen Informatika di Politeknik LP3I Bandung. Selama masa perkuliahan, saya mempelajari banyak hal baru, seperti pengembangan website dan pengembangan aplikasi Android. Selain itu, saya juga belajar tentang jaringan, termasuk menggunakan tool seperti Nmap, dan IP Scanner untuk mengambil informasi dari perangkat yang terhubung ke jaringan.</p>
               </div>
               <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
@@ -166,7 +166,7 @@ function App() {
                   </div>
                   <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">2019 - 2022</span>
                 </div>
-                <p className="text-zinc-400 mt-3 text-sm">Memperoleh sertifikasi jaringan komputer dan dasar-dasar pemrograman.</p>
+                <p className="text-zinc-400 mt-3 text-sm">Selama menempuh pendidikan di SMK Merdeka Bandung jurusan Teknik Komputer Jaringan (TKJ), saya aktif berpartisipasi dalam dua ekstrakurikuler. Pertama, ekstrakurikuler IOT (Internet of Things), di mana saya berfokus pada pengembangan mikrokontroler, seperti membuat prototipe sensor lampu berbasis suara. Kedua, ekstrakurikuler Komputer yang berfokus pada implementasi jaringan, di mana saya belajar cara membangun jaringan Wi-Fi menggunakan konfigurasi perangkat Mikrotik dan Access Point</p>
               </div>
             </div>
           </div>
@@ -182,13 +182,15 @@ function App() {
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-teal-400">Kecamatan Mandalajati</h3>
-                    <p className="text-zinc-300 mt-1">Magang</p>
+                    <p className="text-zinc-300 mt-1">Magang | Bagian IT dan Kearsipan</p>
                   </div>
                   <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">Jan 2021 - Feb 2021</span>
                 </div>
                 <ul className="mt-4 space-y-2 text-zinc-300 pl-5 text-sm">
                   <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Mencatat Berkas Penduduk</li>
                   <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Merakit Komputer untuk Pelayanan</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Memperbaiki Jaringan yang error atau tidak berfungsi</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pembaruan atau instalasi ulang sistem operasi pada PC dengan versi yang sudah lama</li>
                   <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Mengikuti acara yang diselenggarakan pihak kecamatan</li>
                 </ul>
               </div>
@@ -196,18 +198,76 @@ function App() {
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-teal-400">Dinas Perhubungan Kota Bandung</h3>
-                    <p className="text-zinc-300 mt-1">Magang</p>
+                    <p className="text-zinc-300 mt-1">Magang | Bagian IT dan Sarana Prasarana</p>
                   </div>
                   <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">Sep 2021 - Okt 2021</span>
                 </div>
                 <ul className="mt-4 space-y-2 text-zinc-300 pl-5 text-sm">
                   <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Memperbaiki Jaringan internet</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Manajemen dan Pemantauan Jaringan</li>
                   <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Mengikuti acara kegiatan lapangan</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Membuat Laporan kerusakan halte atau lampu jalan</li>
                   <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Memperbaiki komputer dan mengganti komponen yang rusak</li>
                 </ul>
               </div>
             </div>
           </div>
+
+          {/* Certification */}
+<div className="mb-12">
+  <h2 className="text-xl md:text-2xl font-bold mb-6 text-zinc-100 border-b border-zinc-700 pb-3 flex items-center gap-3">
+    <i className="ri-award-line text-teal-400"></i>
+    Sertifikasi
+  </h2>
+  <div className="space-y-6">
+    <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+        <div>
+          <h3 className="text-lg sm:text-xl font-bold text-teal-400">Sertifikasi Junior Office Operator</h3>
+          <p className="text-zinc-300 mt-1">Penguasaan aplikasi Microsoft Office (Word, Excel, PowerPoint).</p>
+        </div>
+        <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">
+          22 Januari 2025
+        </span>
+      </div>
+    </div>
+
+    <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+        <div>
+          <h3 className="text-lg sm:text-xl font-bold text-teal-400">Sertifikasi Junior Web Developer</h3>
+          <p className="text-zinc-300 mt-1">Sertifikasi web membuat crud yang menggunakan php, mysql, html, css, dan javascript</p>
+        </div>
+        <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">
+          07 Maret 2025
+        </span>
+      </div>
+    </div>
+    <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+        <div>
+          <h3 className="text-lg sm:text-xl font-bold text-teal-400">Sertifikasi Junior Mobile Programmer</h3>
+          <p className="text-zinc-300 mt-1">Sertifikasi mobile yang membuat aplikasi dengan flutter</p>
+        </div>
+        <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">
+          23 Juni 2025
+        </span>
+      </div>
+    </div>
+    <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+        <div>
+          <h3 className="text-lg sm:text-xl font-bold text-teal-400">Sertifikasi Making a Simple Network</h3>
+          <p className="text-zinc-300 mt-1">Sertifikasi membuat jaringan sederhana menggunakan mikrotik dan access point</p>
+        </div>
+        <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">
+          12 April 2022
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
           
           {/* Skills */}
           <div className="mb-12">
@@ -219,7 +279,7 @@ function App() {
               <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50">
                 <h3 className="text-lg font-semibold text-teal-400 mb-4 flex items-center gap-2"><i className="ri-code-line"></i>Teknologi</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['HTML/CSS', 'JavaScript', 'React.js', 'Next.js', 'Vite', 'Vue', 'Tailwind CSS', 'Bootstrap', 'Git & GitHub'].map(skill => (
+                  {['HTML/CSS','PHP', 'JavaScript', 'UI Design', 'React.js', 'Vite', 'Tailwind CSS','Figma', 'Desain Topologi', 'Implementasi Fisik'].map(skill => (
                     <span key={skill} className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium">{skill}</span>
                   ))}
                 </div>
@@ -227,7 +287,7 @@ function App() {
               <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50">
                 <h3 className="text-lg font-semibold text-teal-400 mb-4 flex items-center gap-2"><i className="ri-cpu-line"></i>Lainnya</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Mikrokontroler', 'Figma', 'UI Design', 'Microsoft Office', 'Kerja Tim', 'Komunikasi'].map(skill => (
+                  {['Mikrokontroler', 'Microsoft Office', 'Kerja Tim', 'Komunikasi'].map(skill => (
                     <span key={skill} className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium">{skill}</span>
                   ))}
                 </div>
@@ -238,7 +298,7 @@ function App() {
           {/* Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6">
             <div className="bg-zinc-800/70 p-4 rounded-xl border border-zinc-700/50 text-center hover:border-teal-500/30 transition-all">
-              <h3 className="text-3xl font-bold text-teal-400">10+</h3>
+              <h3 className="text-3xl font-bold text-teal-400">2+</h3>
               <p className="text-zinc-300 mt-2 text-sm">Proyek Selesai</p>
             </div>
             <div className="bg-zinc-800/70 p-4 rounded-xl border border-zinc-700/50 text-center hover:border-teal-500/30 transition-all">
@@ -250,7 +310,7 @@ function App() {
               <p className="text-zinc-300 mt-2 text-sm">Pengalaman Kerja</p>
             </div>
             <div className="bg-zinc-800/70 p-4 rounded-xl border border-zinc-700/50 text-center hover:border-teal-500/30 transition-all">
-              <h3 className="text-3xl font-bold text-teal-400">4+</h3>
+              <h3 className="text-3xl font-bold text-teal-400">2+</h3>
               <p className="text-zinc-300 mt-2 text-sm">Tahun Belajar</p>
             </div>
           </div>
