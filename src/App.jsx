@@ -126,9 +126,11 @@ function App() {
                   <h3 className="text-xl sm:text-2xl font-bold text-zinc-100">Angga Cipta Triyana</h3>
                   <p className="text-zinc-300 mt-1">Programmer</p>
                   <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-3">
-                    <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-xs font-medium">React</span>
-                    <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-xs font-medium">PHP</span>
+                    <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-xs font-medium">React & Vite</span>
+                    <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-xs font-medium">PHP (Codeigniter)</span>
                     <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-xs font-medium">UI Design</span>
+                    <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-xs font-medium">Microcontroller</span>
+                    <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-xs font-medium">Jaringan</span>
                   </div>
                 </div>
               </div>
