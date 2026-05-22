@@ -1,8 +1,36 @@
-import DataImage, { listSertifikatImage } from './data';
-import { listTools, listSertifikat, listCv } from './data';
+import DataImage, { listSertifikatImage, listProjectImage } from './data';
+import { listTools, listSertifikat, listCv, listProject } from './data';
 import Marquee from "react-fast-marquee";
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+    document.body.style.overflow = 'auto';
+  };
+
+  useEffect(() => {
+    const initAOS = async () => {
+      const AOS = (await import('aos')).default;
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+      });
+    };
+    initAOS();
+  }, []);
+
   return (
     <div className="bg-zinc-900 text-zinc-100 min-h-screen font-sans">
       
@@ -10,17 +38,17 @@ function App() {
       {/* HERO SECTION */}
       {/* ============================================= */}
       <section className="hero grid grid-cols-1 md:grid-cols-2 items-center min-h-screen gap-10 xl:gap-0 px-6 md:px-12 lg:px-24 mt-20">
-        {/* Left Side: Text Content */}
-        <div className="animate__animated animate__fadeInUpBig animate__delay-3s">
+        <div data-aos="fade-up" data-aos-duration="1000">
           <div className="flex items-center gap-3 mb-8 bg-zinc-800/80 w-fit p-4 rounded-2xl shadow-lg backdrop-blur-sm">
             <img
               src={DataImage.HeroImage}
               alt="Avatar"
               className="w-12 rounded-md"
               loading="lazy"
+              onError={(e) => { e.target.src = 'https://via.placeholder.com/48'; }}
             />
             <q className="text-zinc-200 italic">
-              Hello, World! Siap untuk tantangan digital selanjutnya
+              Siap untuk tantangan digital selanjutnya
             </q>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-zinc-100">
@@ -45,31 +73,33 @@ function App() {
             >
               Lihat Sertifikat <i className="ri-arrow-down-line ri-lg"></i>
             </a>
+            <a
+              href="#projects"
+              className="bg-zinc-800 hover:bg-zinc-700 text-white px-6 py-3 rounded-xl transition-all font-semibold flex items-center gap-2 shadow-lg border border-zinc-700"
+            >
+              Lihat Project <i className="ri-folder-line ri-lg"></i>
+            </a>
           </div>
           
-          {/* Social Links */}
           <div className="mt-10 flex gap-4">
-            <a href="#" className="text-zinc-400 hover:text-teal-400 transition-colors">
+            <a href="https://github.com/anggacipta" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-teal-400 transition-colors">
               <i className="ri-github-fill ri-2x"></i>
             </a>
-            <a href="#" className="text-zinc-400 hover:text-teal-400 transition-colors">
-              <i className="ri-linkedin-box-fill ri-2x"></i>
-            </a>
-            <a href="#" className="text-zinc-400 hover:text-teal-400 transition-colors">
+            <a href="https://instagram.com/angga.ct" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-teal-400 transition-colors">
               <i className="ri-instagram-line ri-2x"></i>
             </a>
           </div>
         </div>
         
-        {/* Right Side: Image */}
-        <div className="flex justify-center md:justify-end">
+        <div className="flex justify-center md:justify-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
           <div className="relative">
             <div className="absolute -inset-4 bg-teal-500/20 rounded-3xl blur-xl"></div>
             <img
               src={DataImage.HeadImage}
               alt="Hero"
-              className="relative w-[280px] md:w-[380px] rounded-2xl shadow-2xl animate__animated animate__fadeInUpBig animate__delay-4s border-2 border-teal-500/30"
+              className="relative w-[280px] md:w-[380px] rounded-2xl shadow-2xl border-2 border-teal-500/30"
               loading="lazy"
+              onError={(e) => { e.target.src = 'https://via.placeholder.com/380x380'; }}
             />
           </div>
         </div>
@@ -94,14 +124,12 @@ function App() {
       </section>
 
       {/* ============================================= */}
-      {/* CURRICULUM VITAE (ABOUT) SECTION */}
+      {/* CURRICULUM VITAE SECTION */}
       {/* ============================================= */}
       <section id="tentang" className="py-24 px-4 sm:px-6 md:px-12 lg:px-24">
         <div 
           className="max-w-6xl mx-auto p-4 sm:p-6 md:p-8 lg:p-10 bg-zinc-800/50 rounded-2xl md:rounded-3xl shadow-xl backdrop-blur-sm border border-zinc-700/50" 
           data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
         >
           <h1 className="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center text-teal-400">CURRICULUM VITAE</h1>
           
@@ -118,8 +146,9 @@ function App() {
                   <img
                     src={DataImage.HeroImage}
                     alt="Profile"
-                    className="relative w-24 h-24 rounded-full object-cover border-2 border-teal-500/30"
+                    className="relative w-32 h-32 rounded-full object-cover border-2 border-teal-500/30"
                     loading="lazy"
+                    onError={(e) => { e.target.src = 'https://via.placeholder.com/128'; }}
                   />
                 </div>
                 <div className="text-center sm:text-left">
@@ -135,10 +164,9 @@ function App() {
                 </div>
               </div>
               <div className="space-y-4 text-zinc-300">
-                <p className="flex items-center gap-3 text-sm sm:text-base"><i className="ri-mail-line text-teal-400"></i>anggacipta32@gmail.com</p>
-                <p className="flex items-center gap-3 text-sm sm:text-base"><i className="ri-phone-line text-teal-400"></i>+62 877 0853 8381</p>
-                <p className="flex items-center gap-3 text-sm sm:text-base"><i className="ri-map-pin-line text-teal-400"></i>Jl. H. Sarkawi No. 119, RT 05/RW 06, Cimeunyan, Kab. Bandung</p>
-                <p className="flex items-center gap-3 text-sm sm:text-base"><i className="ri-github-line text-teal-400"></i>https://github.com/wagugun012</p>
+                <p className="flex items-center gap-3"><i className="ri-mail-line text-teal-400"></i>anggacipta32@gmail.com</p>
+                <p className="flex items-center gap-3"><i className="ri-phone-line text-teal-400"></i>+62 877 0853 8381</p>
+                <p className="flex items-center gap-3"><i className="ri-map-pin-line text-teal-400"></i>Bandung, Jawa Barat</p>
               </div>
             </div>
           </div>
@@ -150,127 +178,51 @@ function App() {
               Pendidikan
             </h2>
             <div className="space-y-6">
-              <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all">
+              <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-teal-400">Manajemen Informatika</h3>
                     <p className="text-zinc-300 mt-1">Politeknik LP3I Bandung | IPK: 3.45</p>
                   </div>
-                  <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">2022 - 2025</span>
+                  <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm">2022 - 2025</span>
                 </div>
-                <p className="text-zinc-400 mt-3 text-sm">Saya telah menyelesaikan pendidikan Manajemen Informatika di Politeknik LP3I Bandung. Selama masa perkuliahan, saya mempelajari banyak hal baru, seperti pengembangan website dan pengembangan aplikasi Android. Selain itu, saya juga belajar tentang jaringan, termasuk menggunakan tool seperti Nmap, dan IP Scanner untuk mengambil informasi dari perangkat yang terhubung ke jaringan.</p>
+                <p className="text-zinc-400 mt-3 text-sm">Mempelajari pengembangan website, aplikasi Android, dan jaringan komputer.</p>
               </div>
-              <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all">
+              <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-teal-400">Teknik Komputer Jaringan</h3>
                     <p className="text-zinc-300 mt-1">SMK Merdeka Bandung</p>
                   </div>
-                  <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">2019 - 2022</span>
+                  <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm">2019 - 2022</span>
                 </div>
-                <p className="text-zinc-400 mt-3 text-sm">Selama menempuh pendidikan di SMK Merdeka Bandung jurusan Teknik Komputer Jaringan (TKJ), saya aktif berpartisipasi dalam dua ekstrakurikuler. Pertama, ekstrakurikuler IOT (Internet of Things), di mana saya berfokus pada pengembangan mikrokontroler, seperti membuat prototipe sensor lampu berbasis suara. Kedua, ekstrakurikuler Komputer yang berfokus pada implementasi jaringan, di mana saya belajar cara membangun jaringan Wi-Fi menggunakan konfigurasi perangkat Mikrotik dan Access Point</p>
+                <p className="text-zinc-400 mt-3 text-sm">Aktif dalam ekstrakurikuler IOT (Internet of Things) dan jaringan komputer.</p>
               </div>
             </div>
           </div>
           
-          {/* Work Experience */}
+          {/* Work Experience - shortened */}
           <div className="mb-12">
             <h2 className="text-xl md:text-2xl font-bold mb-6 text-zinc-100 border-b border-zinc-700 pb-3 flex items-center gap-3">
               <i className="ri-briefcase-line text-teal-400"></i>
-              Pengalaman Kerja Lapangan
+              Pengalaman Kerja
             </h2>
-            <div className="space-y-6">
-              <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-teal-400">Kecamatan Mandalajati</h3>
-                    <p className="text-zinc-300 mt-1">Magang | Bagian IT dan Kearsipan</p>
-                  </div>
-                  <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">Jan 2021 - Feb 2021</span>
-                </div>
-                <ul className="mt-4 space-y-2 text-zinc-300 pl-5 text-sm">
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Mencatat Berkas Penduduk</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Merakit Komputer untuk Pelayanan</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Memperbaiki Jaringan yang error atau tidak berfungsi</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pembaruan atau instalasi ulang sistem operasi pada PC dengan versi yang sudah lama</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Mengikuti acara yang diselenggarakan pihak kecamatan</li>
-                </ul>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50">
+                <h3 className="text-lg font-bold text-teal-400">Kecamatan Mandalajati</h3>
+                <p className="text-zinc-400 text-sm">Magang IT - Jan 2021 s/d Feb 2021</p>
               </div>
-              <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-teal-400">Dinas Perhubungan Kota Bandung</h3>
-                    <p className="text-zinc-300 mt-1">Magang | Bagian IT dan Sarana Prasarana</p>
-                  </div>
-                  <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">Sep 2021 - Okt 2021</span>
-                </div>
-                <ul className="mt-4 space-y-2 text-zinc-300 pl-5 text-sm">
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Memperbaiki Jaringan internet</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Manajemen dan Pemantauan Jaringan</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Mengikuti acara kegiatan lapangan</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Membuat Laporan kerusakan halte atau lampu jalan</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Memperbaiki komputer dan mengganti komponen yang rusak</li>
-                </ul>
+              <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50">
+                <h3 className="text-lg font-bold text-teal-400">Dinas Perhubungan Kota Bandung</h3>
+                <p className="text-zinc-400 text-sm">Magang IT - Sep 2021 s/d Okt 2021</p>
+              </div>
+              <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50">
+                <h3 className="text-lg font-bold text-teal-400">CV. Firman Jaya</h3>
+                <p className="text-zinc-400 text-sm">Staf Administrasi Gudang - Feb 2025 s/d Juni 2025</p>
               </div>
             </div>
           </div>
 
-          {/* Certification */}
-<div className="mb-12">
-  <h2 className="text-xl md:text-2xl font-bold mb-6 text-zinc-100 border-b border-zinc-700 pb-3 flex items-center gap-3">
-    <i className="ri-award-line text-teal-400"></i>
-    Sertifikasi
-  </h2>
-  <div className="space-y-6">
-    <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all">
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
-        <div>
-          <h3 className="text-lg sm:text-xl font-bold text-teal-400">Sertifikasi Junior Office Operator</h3>
-          <p className="text-zinc-300 mt-1">Penguasaan aplikasi Microsoft Office (Word, Excel, PowerPoint).</p>
-        </div>
-        <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">
-          22 Januari 2025
-        </span>
-      </div>
-    </div>
-
-    <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all">
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
-        <div>
-          <h3 className="text-lg sm:text-xl font-bold text-teal-400">Sertifikasi Junior Web Developer</h3>
-          <p className="text-zinc-300 mt-1">Sertifikasi web membuat crud yang menggunakan php, mysql, html, css, dan javascript</p>
-        </div>
-        <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">
-          07 Maret 2025
-        </span>
-      </div>
-    </div>
-    <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all">
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
-        <div>
-          <h3 className="text-lg sm:text-xl font-bold text-teal-400">Sertifikasi Junior Mobile Programmer</h3>
-          <p className="text-zinc-300 mt-1">Sertifikasi mobile yang membuat aplikasi dengan flutter</p>
-        </div>
-        <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">
-          23 Juni 2025
-        </span>
-      </div>
-    </div>
-    <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all">
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
-        <div>
-          <h3 className="text-lg sm:text-xl font-bold text-teal-400">Sertifikasi Making a Simple Network</h3>
-          <p className="text-zinc-300 mt-1">Sertifikasi membuat jaringan sederhana menggunakan mikrotik dan access point</p>
-        </div>
-        <span className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">
-          12 April 2022
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-
-          
           {/* Skills */}
           <div className="mb-12">
             <h2 className="text-xl md:text-2xl font-bold mb-6 text-zinc-100 border-b border-zinc-700 pb-3 flex items-center gap-3">
@@ -278,19 +230,19 @@ function App() {
               Keahlian
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50">
-                <h3 className="text-lg font-semibold text-teal-400 mb-4 flex items-center gap-2"><i className="ri-code-line"></i>Teknologi</h3>
+              <div className="bg-zinc-800/70 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-teal-400 mb-4">Teknologi</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['HTML/CSS','PHP', 'JavaScript', 'UI Design', 'React.js', 'Vite', 'Tailwind CSS','Figma', 'Desain Topologi', 'Implementasi Fisik'].map(skill => (
-                    <span key={skill} className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium">{skill}</span>
+                  {['React.js', 'Tailwind CSS', 'JavaScript', 'PHP', 'Flutter', 'CodeIgniter'].map(skill => (
+                    <span key={skill} className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm">{skill}</span>
                   ))}
                 </div>
               </div>
-              <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50">
-                <h3 className="text-lg font-semibold text-teal-400 mb-4 flex items-center gap-2"><i className="ri-cpu-line"></i>Lainnya</h3>
+              <div className="bg-zinc-800/70 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-teal-400 mb-4">Lainnya</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Mikrokontroler', 'Microsoft Office', 'Kerja Tim', 'Komunikasi'].map(skill => (
-                    <span key={skill} className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm font-medium">{skill}</span>
+                  {['Arduino', 'Microsoft Office', 'Figma', 'GitHub'].map(skill => (
+                    <span key={skill} className="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-sm">{skill}</span>
                   ))}
                 </div>
               </div>
@@ -298,53 +250,202 @@ function App() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6">
-            <div className="bg-zinc-800/70 p-4 rounded-xl border border-zinc-700/50 text-center hover:border-teal-500/30 transition-all">
-              <h3 className="text-3xl font-bold text-teal-400">2+</h3>
-              <p className="text-zinc-300 mt-2 text-sm">Proyek Selesai</p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="bg-zinc-800/70 p-4 rounded-xl text-center">
+              <h3 className="text-3xl font-bold text-teal-400">6+</h3>
+              <p className="text-zinc-300 text-sm">Proyek Selesai</p>
             </div>
-            <div className="bg-zinc-800/70 p-4 rounded-xl border border-zinc-700/50 text-center hover:border-teal-500/30 transition-all">
+            <div className="bg-zinc-800/70 p-4 rounded-xl text-center">
               <h3 className="text-3xl font-bold text-teal-400">8+</h3>
-              <p className="text-zinc-300 mt-2 text-sm">Sertifikat</p>
+              <p className="text-zinc-300 text-sm">Sertifikat</p>
             </div>
-            <div className="bg-zinc-800/70 p-4 rounded-xl border border-zinc-700/50 text-center hover:border-teal-500/30 transition-all">
-              <h3 className="text-3xl font-bold text-teal-400">2+</h3>
-              <p className="text-zinc-300 mt-2 text-sm">Pengalaman Kerja</p>
+            <div className="bg-zinc-800/70 p-4 rounded-xl text-center">
+              <h3 className="text-3xl font-bold text-teal-400">3+</h3>
+              <p className="text-zinc-300 text-sm">Pengalaman</p>
             </div>
-            <div className="bg-zinc-800/70 p-4 rounded-xl border border-zinc-700/50 text-center hover:border-teal-500/30 transition-all">
-              <h3 className="text-3xl font-bold text-teal-400">2+</h3>
-              <p className="text-zinc-300 mt-2 text-sm">Tahun Belajar</p>
+            <div className="bg-zinc-800/70 p-4 rounded-xl text-center">
+              <h3 className="text-3xl font-bold text-teal-400">4+</h3>
+              <p className="text-zinc-300 text-sm">Tahun Belajar</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ============================================= */}
+{/* PROJECTS SECTION */}
+{/* ============================================= */}
+<section id="projects" className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-800/20">
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-16">
+      <h1 className="text-4xl font-bold mb-4 text-zinc-100" data-aos="fade-up">
+        Project Portfolio
+      </h1>
+      <p className="text-lg text-zinc-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+        Berikut adalah berbagai project yang telah saya kerjakan, mulai dari pengembangan web, mobile, hingga IoT.
+      </p>
+    </div>
+    
+    <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
+      {listProject.map((project, index) => (
+        <div
+          key={project.id}
+          className="bg-zinc-800/50 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 overflow-hidden transition-all duration-300 hover:transform hover:-translate-y-1 cursor-pointer" 
+          data-aos="fade-up"
+          data-aos-delay={index * 100}
+          onClick={() => openModal(project)}
+        >
+          {/* Gambar Project */}
+          <div className="relative h-48 overflow-hidden bg-gradient-to-br from-zinc-700 to-zinc-800">
+            <img
+              src={listProjectImage[index]?.gambar}
+              alt={project.nama}
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              loading="lazy"
+              onError={(e) => { 
+                e.target.src = 'https://img.icons8.com/color/240/document.png';
+              }}
+            />
+            <div className="absolute top-3 right-3">
+              <span className="bg-red-500/90 text-white text-xs px-2 py-1 rounded-full font-medium shadow-lg">
+                📄 PDF
+              </span>
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="p-6">
+            <h3 className="text-xl font-bold text-teal-400 mb-2 line-clamp-1">{project.nama}</h3>
+            <p className="text-zinc-400 text-sm mb-4 line-clamp-2">{project.deskripsi}</p>
+            
+            <div className="flex flex-wrap gap-1.5 mb-4">
+              <span className="bg-zinc-700/50 text-zinc-300 text-xs px-2 py-0.5 rounded-full">
+                📅 {project.tanggal}
+              </span>
+            </div>
+            
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                openModal(project);
+              }}
+              className="inline-flex items-center justify-center w-full bg-teal-600 hover:bg-teal-700 text-white px-4 py-3 rounded-lg transition-all font-medium"
+            >
+              Lihat Detail Project
+              <i className="ri-external-link-line ml-2"></i>
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+      {/* ============================================= */}
+      {/* PROJECT MODAL */}
+      {/* ============================================= */}
+      {isModalOpen && selectedProject && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
+          onClick={closeModal}
+        >
+          <div 
+            className="relative bg-zinc-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-teal-500/30 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 z-10 bg-zinc-900/80 hover:bg-zinc-700 text-white p-2 rounded-full transition-all"
+            >
+              <i className="ri-close-line text-2xl"></i>
+            </button>
+            
+            <div className="p-6 md:p-8">
+              <div className="mb-6 rounded-xl overflow-hidden bg-zinc-700/30">
+                <img
+                  src={selectedProject.thumbnail}
+                  alt={selectedProject.nama}
+                  className="w-full max-h-[400px] object-contain bg-zinc-900/50"
+                  onError={(e) => { e.target.src = 'https://via.placeholder.com/800x400?text=Project+Preview'; }}
+                />
+              </div>
+              
+              <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-teal-400">{selectedProject.nama}</h2>
+                <span className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-medium border border-red-500/30">
+                  📄 PDF Document
+                </span>
+              </div>
+              
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-zinc-200 mb-2 flex items-center gap-2">
+                  <i className="ri-file-list-line text-teal-400"></i> Deskripsi Project
+                </h3>
+                <p className="text-zinc-300 leading-relaxed">{selectedProject.deskripsi}</p>
+              </div>
+              
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-zinc-200 mb-3 flex items-center gap-2">
+                  <i className="ri-calendar-line text-teal-400"></i> Tahun Pengerjaan
+                </h3>
+                <p className="text-zinc-300">{selectedProject.tanggal}</p>
+              </div>
+
+              {selectedProject.techStack && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-zinc-200 mb-3 flex items-center gap-2">
+                    <i className="ri-stack-line text-teal-400"></i> Teknologi
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedProject.techStack.map((tech, i) => (
+                      <span key={i} className="bg-zinc-700/70 text-teal-300 px-3 py-1 rounded-lg text-sm">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              <div className="flex flex-wrap gap-4 pt-4 border-t border-zinc-700">
+                <a
+                  href={selectedProject.gambar}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-xl transition-all font-semibold flex items-center justify-center gap-2"
+                >
+                  <i className="ri-file-pdf-line"></i> Baca PDF Project
+                </a>
+                <a
+                  href={selectedProject.gambar}
+                  download
+                  className="flex-1 bg-zinc-700 hover:bg-zinc-600 text-white px-6 py-3 rounded-xl transition-all font-semibold flex items-center justify-center gap-2"
+                >
+                  <i className="ri-download-line"></i> Download PDF
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ============================================= */}
       {/* TOOLS SECTION */}
       {/* ============================================= */}
       <section className="py-24 px-6 md:px-12 lg:px-24">
-        <div className="max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+        <div className="max-w-6xl mx-auto" data-aos="fade-up">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold mb-4 text-zinc-100">Tools yang Saya Gunakan</h1>
-            <p className="text-lg text-zinc-300 max-w-2xl mx-auto">Berbagai teknologi dan alat yang biasa saya gunakan untuk membangun website dan aplikasi yang menarik.</p>
+            <p className="text-lg text-zinc-300 max-w-2xl mx-auto">Berbagai teknologi dan alat yang biasa saya gunakan.</p>
           </div>
           
-          <div className="tools-box grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
-            {listTools.map((tool, index) => (
-              <div
-                className="flex items-center gap-4 p-5 bg-zinc-800/50 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay={tool.dad}
-                data-aos-once="true"
-                style={{ animationDelay: `${index * 100}ms` }}
-                key={tool.id}
-              >
+          <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+            {listTools.map((tool) => (
+              <div key={tool.id} className="flex items-center gap-4 p-5 bg-zinc-800/50 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all">
                 <div className="bg-zinc-800 p-3 rounded-lg">
                   <img
                     src={tool.gambar}
                     alt={tool.nama}
                     className="w-10 h-10 object-contain"
+                    onError={(e) => { e.target.src = 'https://via.placeholder.com/40?text=' + tool.nama.charAt(0); }}
                   />
                 </div>
                 <div>
@@ -360,13 +461,13 @@ function App() {
       {/* ============================================= */}
       {/* SERTIFIKAT SECTION */}
       {/* ============================================= */}
-      <section id="sertifikat" className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-800/20">
+      <section id="sertifikat" className="py-24 px-6 md:px-12 lg:px-24">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold mb-4 text-zinc-100" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+            <h1 className="text-4xl font-bold mb-4 text-zinc-100" data-aos="fade-up">
               Sertifikat & Penghargaan
             </h1>
-            <p className="text-lg text-zinc-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
+            <p className="text-lg text-zinc-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
               Berbagai sertifikat dan penghargaan yang telah saya dapatkan selama belajar dan bekerja.
             </p>
           </div>
@@ -377,36 +478,23 @@ function App() {
                 key={sertifikat.id}
                 className="bg-zinc-800/50 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 overflow-hidden" 
                 data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay={sertifikat.dad}
-                data-aos-once="true"
-                style={{ animationDelay: `${index * 120}ms` }}
+                data-aos-delay={index * 100}
               >
-                {sertifikat.tipe === 'pdf' ? (
-                  <div className="bg-white p-8 flex items-center justify-center h-48">
-                    <img
-                      src={listSertifikatImage[index]?.gambar}
-                      alt="PDF Icon"
-                      className="w-40 h-auto object-contain"
-                      loading='lazy'
-                    />
-                  </div>
-                ) : (
+                <div className="bg-white p-8 flex items-center justify-center h-48">
                   <img
-                    src={listSertifikatImage[index]?.gambar || '/assets/placeholder.png'}
-                    alt={sertifikat.nama}
-                    className="w-full h-48 object-cover"
+                    src={listSertifikatImage[index]?.gambar}
+                    alt="PDF Icon"
+                    className="w-32 h-auto object-contain"
                     loading="lazy"
+                    onError={(e) => { e.target.src = 'https://via.placeholder.com/128x128?text=PDF'; }}
                   />
-                )}
+                </div>
 
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-teal-400 mb-2 truncate">{sertifikat.nama}</h3>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <span className="bg-zinc-700 text-zinc-300 px-3 py-1 rounded-full text-xs font-medium">{sertifikat.tanggal}</span>
-                    {sertifikat.tipe === 'pdf' && (
-                      <span className="bg-red-500/10 text-red-400 px-3 py-1 rounded-full text-xs font-medium">PDF</span>
-                    )}
+                    <span className="bg-red-500/10 text-red-400 px-3 py-1 rounded-full text-xs font-medium">PDF</span>
                   </div>
                   <a
                     href={sertifikat.gambar}
@@ -427,26 +515,27 @@ function App() {
       {/* ============================================= */}
       {/* KONTAK SECTION */}
       {/* ============================================= */}
-      <section id="kontak" className="py-24 px-6 md:px-12 lg:px-24">
+      <section id="kontak" className="py-24 px-6 md:px-12 lg:px-24 bg-zinc-800/20">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold mb-4 text-zinc-100" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+            <h1 className="text-4xl font-bold mb-4 text-zinc-100" data-aos="fade-up">
               Hubungi Saya
             </h1>
-            <p className="text-lg text-zinc-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
+            <p className="text-lg text-zinc-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
               Tertarik bekerja sama atau memiliki pertanyaan? Silakan kirim pesan melalui formulir berikut.
             </p>
           </div>
           
           <form
-            action="https://formsubmit.co/sumardiujang65@gmail.com"
+            action="https://formsubmit.co/anggacipta32@gmail.com"
             method="POST"
             className="bg-zinc-800/50 p-8 md:p-10 rounded-2xl border border-zinc-700/50 shadow-xl" 
             data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="500"
-            data-aos-once="true"
+            data-aos-delay="300"
           >
+            <input type="hidden" name="_subject" value="Pesan baru dari Portfolio Website!" />
+            <input type="hidden" name="_captcha" value="false" />
+            
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label htmlFor="nama" className="block text-zinc-300 mb-2 font-medium">Nama Lengkap</label>
@@ -455,7 +544,7 @@ function App() {
                   id="nama"
                   name="nama"
                   placeholder="Nama Anda"
-                  className="w-full bg-zinc-700/50 border border-zinc-600 rounded-lg px-4 py-3 text-zinc-100 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                  className="w-full bg-zinc-700/50 border border-zinc-600 rounded-lg px-4 py-3 text-zinc-100 focus:outline-none focus:ring-2 focus:ring-teal-500"
                   required
                 />
               </div>
@@ -466,7 +555,7 @@ function App() {
                   id="email"
                   name="email"
                   placeholder="email@contoh.com"
-                  className="w-full bg-zinc-700/50 border border-zinc-600 rounded-lg px-4 py-3 text-zinc-100 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                  className="w-full bg-zinc-700/50 border border-zinc-600 rounded-lg px-4 py-3 text-zinc-100 focus:outline-none focus:ring-2 focus:ring-teal-500"
                   required
                 />
               </div>
@@ -479,7 +568,7 @@ function App() {
                 name="pesan"
                 rows="5"
                 placeholder="Tulis pesan Anda..."
-                className="w-full bg-zinc-700/50 border border-zinc-600 rounded-lg px-4 py-3 text-zinc-100 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                className="w-full bg-zinc-700/50 border border-zinc-600 rounded-lg px-4 py-3 text-zinc-100 focus:outline-none focus:ring-2 focus:ring-teal-500"
                 required
               ></textarea>
             </div>
@@ -500,9 +589,12 @@ function App() {
       <footer className="bg-zinc-900 border-t border-zinc-800 py-8 px-6 md:px-12 lg:px-24">
         <div className="max-w-6xl mx-auto text-center text-zinc-400">
           <div className="flex justify-center gap-6 mb-4">
-            <a href="#" className="text-zinc-400 hover:text-teal-400 transition-colors"><i className="ri-github-fill ri-2x"></i></a>
-            <a href="#" className="text-zinc-400 hover:text-teal-400 transition-colors"><i className="ri-linkedin-box-fill ri-2x"></i></a>
-            <a href="#" className="text-zinc-400 hover:text-teal-400 transition-colors"><i className="ri-instagram-line ri-2x"></i></a>
+            <a href="https://github.com/anggacipta" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-teal-400 transition-colors">
+              <i className="ri-github-fill ri-2x"></i>
+            </a>
+            <a href="https://instagram.com/angga.ct" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-teal-400 transition-colors">
+              <i className="ri-instagram-line ri-2x"></i>
+            </a>
           </div>
           <p>&copy; {new Date().getFullYear()} Angga Cipta Triyana. All Rights Reserved.</p>
         </div>
