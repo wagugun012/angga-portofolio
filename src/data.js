@@ -138,7 +138,7 @@ export const listProject = [
     thumbnail: pro1,
     nama: 'Absensi RFID',
     deskripsi: 'Aplikasi absensi berbasis RFID menggunakan Arduino dan sensor RFID untuk mencatat kehadiran karyawan secara otomatis.',
-    tanggal: '2024',
+    tanggal: '2025',
     dad: '200',
     tipe: 'pdf',
     techStack: ['Arduino', 'RFID', 'PHP', 'MySQL']
@@ -149,7 +149,7 @@ export const listProject = [
     thumbnail: pro2,
     nama: 'Company Profile Dwiputra',
     deskripsi: 'Website company profile modern untuk perusahaan Dwiputra dengan desain responsif dan animasi menarik.',
-    tanggal: '2024',
+    tanggal: '2025',
     dad: '300',
     tipe: 'pdf',
     techStack: ['React', 'Tailwind CSS', 'Vite']
@@ -160,7 +160,7 @@ export const listProject = [
     thumbnail: pro3,
     nama: 'Aplikasi Serbaguna',
     deskripsi: 'Aplikasi mobile multi-fungsi yang menyediakan berbagai fitur utility seperti kalkulator, konverter, dan notes.',
-    tanggal: '2023',
+    tanggal: '2025',
     dad: '400',
     tipe: 'pdf',
     techStack: ['Flutter', 'Dart', 'Firebase']
@@ -171,7 +171,7 @@ export const listProject = [
     thumbnail: pro4,
     nama: 'Password Manager',
     deskripsi: 'Aplikasi pengelola password yang aman dengan fitur enkripsi AES-256 dan penyimpanan lokal.',
-    tanggal: '2024',
+    tanggal: '2025',
     dad: '500',
     tipe: 'pdf',
     techStack: ['React Native', 'Node.js', 'MongoDB']
@@ -182,7 +182,7 @@ export const listProject = [
     thumbnail: pro5,
     nama: 'Pemesanan Menu (Mobile)',
     deskripsi: 'Aplikasi mobile untuk pemesanan menu restoran dengan fitur keranjang belanja dan riwayat pesanan.',
-    tanggal: '2024',
+    tanggal: '2025',
     dad: '600',
     tipe: 'pdf',
     techStack: ['Kotlin', 'Firebase', 'Material Design']
@@ -193,7 +193,7 @@ export const listProject = [
     thumbnail: pro6,
     nama: 'Pemesanan Menu Web',
     deskripsi: 'Website pemesanan menu restoran dengan dashboard admin untuk mengelola menu dan pesanan.',
-    tanggal: '2024',
+    tanggal: '2025',
     dad: '900',
     tipe: 'pdf',
     techStack: ['PHP', 'CodeIgniter', 'MySQL', 'Bootstrap']
