@@ -97,7 +97,7 @@ export const listSertifikat = [
 ]
 
 // CV
-import curiculum1 from '/assets/sertifikat/cv_angga.pdf'
+import curiculum1 from '/assets/sertifikat/cv_angga_cipta_triyana.pdf'
 export const listCv = [
   { id: 1, gambar: curiculum1, nama: 'Curriculum Vitae', dad: '100', tipe: 'pdf' },
 ]

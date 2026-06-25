@@ -94,23 +94,25 @@ function App() {
             passionate dalam membangun antarmuka pengguna yang elegan dan fungsional, 
             serta tertarik dengan pengembangan alat berbasis mikrokontroler.
           </p>
-          <div className="flex items-center gap-4 flex-wrap">
+          
+          {/* Button Group */}
+          <div className="flex flex-col sm:flex-row items-center justify-start gap-3 mt-8 w-full">
             <a
               href={listCv[0].gambar}
               download
-              className="bg-gradient-to-r from-teal-600 to-teal-500 hover:from-teal-500 hover:to-teal-400 text-white px-6 py-3 rounded-xl transition-all font-semibold flex items-center gap-2 shadow-lg hover:shadow-teal-500/50 transform hover:scale-105 duration-300"
+              className="w-full sm:w-auto bg-gradient-to-r from-teal-600 to-teal-500 hover:from-teal-500 hover:to-teal-400 text-white px-6 py-3 rounded-xl transition-all font-semibold flex items-center justify-center gap-2 shadow-lg hover:shadow-teal-500/50 transform hover:scale-105 duration-300"
             >
               Download CV <i className="ri-download-cloud-2-line ri-lg"></i>
             </a>
             <a
               href="#sertifikat"
-              className="bg-zinc-800/80 hover:bg-zinc-700/80 text-white px-6 py-3 rounded-xl transition-all font-semibold flex items-center gap-2 shadow-lg border border-zinc-700 backdrop-blur-sm hover:scale-105 duration-300"
+              className="w-full sm:w-auto bg-zinc-800/80 hover:bg-zinc-700/80 text-white px-6 py-3 rounded-xl transition-all font-semibold flex items-center justify-center gap-2 shadow-lg border border-zinc-700 backdrop-blur-sm hover:scale-105 duration-300"
             >
               Lihat Sertifikat <i className="ri-arrow-down-line ri-lg"></i>
             </a>
             <a
               href="#projects"
-              className="bg-zinc-800/80 hover:bg-zinc-700/80 text-white px-6 py-3 rounded-xl transition-all font-semibold flex items-center gap-2 shadow-lg border border-zinc-700 backdrop-blur-sm hover:scale-105 duration-300"
+              className="w-full sm:w-auto bg-zinc-800/80 hover:bg-zinc-700/80 text-white px-6 py-3 rounded-xl transition-all font-semibold flex items-center justify-center gap-2 shadow-lg border border-zinc-700 backdrop-blur-sm hover:scale-105 duration-300"
             >
               Lihat Project <i className="ri-folder-line ri-lg"></i>
             </a>
@@ -181,32 +183,56 @@ function App() {
               <i className="ri-user-3-line text-teal-400"></i>
               Informasi Pribadi
             </h2>
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-teal-500/30 to-cyan-500/30 rounded-full blur-md group-hover:blur-xl transition-all"></div>
-                  <img
-                    src={DataImage.HeroImage}
-                    alt="Profile"
-                    className="relative w-32 h-32 rounded-full object-cover border-2 border-teal-500/30 group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                    onError={(e) => { e.target.src = 'https://via.placeholder.com/128'; }}
-                  />
+            <div className="bg-gradient-to-r from-zinc-800/50 to-zinc-800/30 border border-teal-500/20 rounded-2xl p-8 hover:border-teal-500/40 transition-all">
+              <div className="grid md:grid-cols-3 gap-8 items-start">
+                {/* Photo Section */}
+                <div className="flex flex-col items-center md:items-start">
+                  <div className="relative group mb-4">
+                    <div className="absolute inset-0 bg-gradient-to-r from-teal-500/40 to-cyan-500/40 rounded-full blur-lg group-hover:blur-xl transition-all"></div>
+                    <img
+                      src={DataImage.HeroImage}
+                      alt="Profile"
+                      className="relative w-32 h-32 rounded-full object-cover border-3 border-teal-500/50 group-hover:scale-105 transition-transform duration-300 shadow-lg"
+                      loading="lazy"
+                      onError={(e) => { e.target.src = 'https://via.placeholder.com/128'; }}
+                    />
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-300 text-center md:text-left">Angga Cipta Triyana</h3>
+                  <p className="text-teal-400 font-semibold text-sm md:text-base mt-1">Programmer</p>
                 </div>
-                <div className="text-center sm:text-left">
-                  <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">Angga Cipta Triyana</h3>
-                  <p className="text-teal-400 mt-1">Programmer</p>
-                  <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-3">
-                    {['React & Vite', 'PHP (Codeigniter)', 'UI Design', 'Microcontroller', 'Jaringan'].map(skill => (
-                      <span key={skill} className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-400 px-3 py-1 rounded-full text-xs font-medium border border-teal-500/30">{skill}</span>
-                    ))}
+
+                {/* Contact Info */}
+                <div className="md:col-span-2 grid sm:grid-cols-2 gap-4">
+                  <div className="bg-gradient-to-r from-teal-500/10 to-cyan-500/10 border border-teal-500/30 rounded-xl p-4 hover:border-teal-500/50 transition-all">
+                    <p className="flex items-center gap-3 text-zinc-100">
+                      <i className="ri-mail-line text-teal-400 text-lg flex-shrink-0"></i>
+                      <span className="text-sm">
+                        <span className="block text-zinc-400 text-xs">Email</span>
+                        <span className="font-medium">anggacipta32@gmail.com</span>
+                      </span>
+                    </p>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-teal-500/10 to-cyan-500/10 border border-teal-500/30 rounded-xl p-4 hover:border-teal-500/50 transition-all">
+                    <p className="flex items-center gap-3 text-zinc-100">
+                      <i className="ri-phone-line text-teal-400 text-lg flex-shrink-0"></i>
+                      <span className="text-sm">
+                        <span className="block text-zinc-400 text-xs">Telepon</span>
+                        <span className="font-medium">+62 877 0853 8381</span>
+                      </span>
+                    </p>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-teal-500/10 to-cyan-500/10 border border-teal-500/30 rounded-xl p-4 hover:border-teal-500/50 transition-all sm:col-span-2">
+                    <p className="flex items-center gap-3 text-zinc-100">
+                      <i className="ri-map-pin-line text-teal-400 text-lg flex-shrink-0"></i>
+                      <span className="text-sm">
+                        <span className="block text-zinc-400 text-xs">Lokasi</span>
+                        <span className="font-medium">Bandung, Jawa Barat</span>
+                      </span>
+                    </p>
                   </div>
                 </div>
-              </div>
-              <div className="space-y-4 text-zinc-300">
-                <p className="flex items-center gap-3 hover:text-teal-400 transition-colors"><i className="ri-mail-line text-teal-400"></i>anggacipta32@gmail.com</p>
-                <p className="flex items-center gap-3 hover:text-teal-400 transition-colors"><i className="ri-phone-line text-teal-400"></i>+62 877 0853 8381</p>
-                <p className="flex items-center gap-3 hover:text-teal-400 transition-colors"><i className="ri-map-pin-line text-teal-400"></i>Bandung, Jawa Barat</p>
               </div>
             </div>
           </div>
@@ -605,7 +631,7 @@ function App() {
           </div>
           
           <form
-            action="https://formsubmit.co/anggacipta32@gmail.com"
+            action="https://formsubmit.co/ryantonusro@gmail.com"
             method="POST"
             className="bg-zinc-800/40 p-8 md:p-10 rounded-2xl border border-white/10 hover:border-teal-500/30 transition-all shadow-xl backdrop-blur-md" 
             data-aos="fade-up"
