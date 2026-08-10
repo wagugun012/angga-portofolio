@@ -22,12 +22,14 @@ import Tools10 from '/assets/tools/PHP.png'
 import Tools11 from '/assets/tools/arduino.png'
 import Tools12 from '/assets/tools/nodejs.png'
 import Tools13 from '/assets/tools/github.png'
-import Tools14 from '/assets/tools/ai.png'
+import Tools14 from '/assets/tools/css.png'
 import Tools15 from '/assets/tools/canva.png'
-import Tools16 from '/assets/tools/figma.png'
+import Tools16 from '/assets/tools/balsamik.png'
 import Tools17 from '/assets/tools/winbox.png'
 import Tools18 from '/assets/tools/nmap.png'
 import Tools19 from '/assets/tools/ip-scanner.png'
+import Tools20 from '/assets/tools/office.png'
+import Tools21 from '/assets/tools/firebase.png'
 
 export const listTools = [
   { id: 1, gambar: Tools1, nama: 'Visual Studio Code', ket: 'Code Editor', dad: '100' },
@@ -42,12 +44,14 @@ export const listTools = [
   { id: 11, gambar: Tools11, nama: 'Arduino', ket: 'Hardware', dad: '1100' },
   { id: 12, gambar: Tools12, nama: 'Node JS', ket: 'Framework', dad: '1200' },
   { id: 13, gambar: Tools13, nama: 'Github', ket: 'Repository', dad: '1300' },
-  { id: 14, gambar: Tools14, nama: 'AI', ket: 'Design App', dad: '1400' },
+  { id: 14, gambar: Tools14, nama: 'CSS', ket: 'Language', dad: '1400' },
   { id: 15, gambar: Tools15, nama: 'Canva', ket: 'Design App', dad: '1500' },
-  { id: 16, gambar: Tools16, nama: 'Figma', ket: 'Design App', dad: '1600' },
+  { id: 16, gambar: Tools16, nama: 'Balsamiq', ket: 'Design App', dad: '1600' },
   { id: 17, gambar: Tools17, nama: 'Winbox', ket: 'Network App', dad: '1700' },
   { id: 18, gambar: Tools18, nama: 'Nmap', ket: 'Network App', dad: '1800' },
   { id: 19, gambar: Tools19, nama: 'IP Scanner', ket: 'Network App', dad: '1900' },
+  { id: 20, gambar: Tools20, nama: 'Office', ket: 'Productivity App', dad: '2000' },
+  { id: 21, gambar: Tools21, nama: 'Firebase', ket: 'Database', dad: '2100' },
 ]
 
 // ============================================

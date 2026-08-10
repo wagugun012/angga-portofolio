@@ -122,7 +122,7 @@ function App() {
             <a href="https://github.com/anggacipta" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-teal-400 transition-all hover:scale-110 duration-300">
               <i className="ri-github-fill ri-2x"></i>
             </a>
-            <a href="https://instagram.com/angga.ct" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-teal-400 transition-all hover:scale-110 duration-300">
+            <a href="https://instagram.com/anggacipta6" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-teal-400 transition-all hover:scale-110 duration-300">
               <i className="ri-instagram-line ri-2x"></i>
             </a>
             <a href="#" className="text-zinc-400 hover:text-teal-400 transition-all hover:scale-110 duration-300">
@@ -157,7 +157,7 @@ function App() {
           pauseOnHover={true}
           className="text-lg md:text-xl font-semibold"
         >
-          {['Frontend Developer', 'UI Designer', 'Fullstack Developer', 'Microcontroller Developer', 'Backend Developer', 'React Specialist', 'IoT Enthusiast'].map((skill, i) => (
+          {['Frontend Developer', 'UI Designer', 'Microcontroller Developer', 'Backend Developer', 'IoT Enthusiast', 'Administrasi', 'manajemen arsip', 'Administrasi Gudang'].map((skill, i) => (
             <span key={i} className="mx-8 text-transparent bg-gradient-to-r from-teal-300 to-cyan-400 bg-clip-text hover:from-teal-200 hover:to-cyan-300 transition-all duration-300">
               ✦ {skill} ✦
             </span>
@@ -534,7 +534,7 @@ function App() {
         <div className="max-w-6xl mx-auto" data-aos="fade-up">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">Tools yang Saya Gunakan</span>
+              <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">Tools dan Software yang Saya Gunakan</span>
             </h1>
             <p className="text-lg text-zinc-300 max-w-2xl mx-auto">Berbagai teknologi dan alat yang biasa saya gunakan.</p>
           </div>
