@@ -280,7 +280,7 @@ function App() {
                     <h3 className="text-lg sm:text-xl font-bold text-teal-400">Kecamatan Mandalajati</h3>
                     <p className="text-zinc-300 mt-1">Magang | Bagian IT dan Kearsipan</p>
                   </div>
-                  <span className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">Jan 2021 - Feb 2021</span>
+                  <span className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">1 Feb 2021 - 31 Mar 2021</span>
                 </div>
                 <ul className="mt-4 space-y-2 text-zinc-300 pl-5 text-sm">
                   <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Mencatat Berkas Penduduk</li>
@@ -296,7 +296,7 @@ function App() {
                     <h3 className="text-lg sm:text-xl font-bold text-teal-400">Dinas Perhubungan Kota Bandung</h3>
                     <p className="text-zinc-300 mt-1">Magang | Bagian IT dan Sarana Prasarana</p>
                   </div>
-                  <span className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">Sep 2021 - Okt 2021</span>
+                  <span className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">1 Sep 2021 - 31 Okt 2021</span>
                 </div>
                 <ul className="mt-4 space-y-2 text-zinc-300 pl-5 text-sm">
                   <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Memperbaiki Jaringan internet</li>
@@ -312,13 +312,66 @@ function App() {
                     <h3 className="text-lg sm:text-xl font-bold text-teal-400">CV. Firman Jaya</h3>
                     <p className="text-zinc-300 mt-1">Bekerja | Bagian Staf Administrasi Gudang</p>
                   </div>
-                  <span className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">Feb 2025 - Juni 2025</span>
+                  <span className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">6 Feb 2023 - 27 Nov 2023</span>
                 </div>
                 <ul className="mt-4 space-y-2 text-zinc-300 pl-5 text-sm">
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Menimbang barang yang masuk sesuai tonase</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Menimbang barang yang akan dikirim ke peleburan</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Menyiapkan Surat Jalan</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Mendata barang yang masuk dan keluar dalam 1 hari</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan Pendataan Kendaraan yang kosong tidak ada muatan barang yang nantinya akan di isi oleh barang yang akan di kirim</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Menghitung tonase barang masuk dan barang keluar</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pengecekan barang apa saja yang akan dikirim</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pengecekan dokumen</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Membuat surat jalan</li>
+                <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Membuat dan mengarsipkan dokumen</li>
+                </ul>
+              </div>
+              <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all duration-300 hover:transform hover:-translate-y-1">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-teal-400">Dealpro Indonesia</h3>
+                    <p className="text-zinc-300 mt-1">Bekerja | Bagian IT Support</p>
+                  </div>
+                  <span className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">3 Sep 2024 - 29 Nov 2024</span>
+                </div>
+                <ul className="mt-4 space-y-2 text-zinc-300 pl-5 text-sm">
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Memberikan dukungan teknis terkait perangkat komputer, printer, dan perangkat IT lainnya</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan instalasi, konfigurasi, dan pengecekan perangkat komputer serta printer</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Membantu proses pencetakan dokumen sesuai kebutuhan Perusahaan</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pengecekan file dan menyesuaikan dokumen sebelum proses printing</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Membantu pekerjaan operasional lainnya yang berkaitan dengan IT dan percetakan</li>
+                </ul>
+              </div>
+              <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all duration-300 hover:transform hover:-translate-y-1">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-teal-400">Nexa Advertising Digital Agency</h3>
+                    <p className="text-zinc-300 mt-1">Bekerja | Bagian Web Developer dan Mobile Developer</p>
+                  </div>
+                  <span className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">11 Mar 2025 - 21 Agt 2025</span>
+                </div>
+                <ul className="mt-4 space-y-2 text-zinc-300 pl-5 text-sm">
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Mengembangkan dan membuat website sesuai kebutuhan Perusahaan</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Membuat dan mengembangkan fitur pada website menggunakan HTML, CSS, JavaScript, PHP</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Memperbaiki bug dan melakukan pemeliharaan website, Melakukan pembaruan serta pengembangan fitur website</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Membuat dan mengembangkan fitur aplikasi menggunakan framework seperti Flutter dan bahasa pemrograman Dart</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pengujian aplikasi pada perangkat mobile</li>
+                <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pemeliharaan dan pembaruan aplikasi</li>
+                </ul>
+              </div>
+              <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all duration-300 hover:transform hover:-translate-y-1">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-teal-400">DWI PUTRA JAYA</h3>
+                    <p className="text-zinc-300 mt-1">Bekerja | Bagian Penjualan dan Keuangan</p>
+                  </div>
+                  <span className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">15 Sep 2025 - 31 Agt 2026</span>
+                </div>
+                <ul className="mt-4 space-y-2 text-zinc-300 pl-5 text-sm">
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melayani dan mencatat transaksi penjualan kepada pelanggan</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pengecekan pesanan dan memastikan kesesuaian barang dengan permintaan pelanggan</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pencatatan dan pengecekan pembayaran pelanggan</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Mencatat transaksi pemasukan dan pengeluaran perusahaan</li>
+                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pengecekan pembayaran dan penerimaan dana</li>
+                <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pengecekan kesesuaian data transaksi</li>
+                <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Membantu memotong kertas dengan meggunakan mesin potong kertas</li>
                 </ul>
               </div>
             </div>
@@ -355,8 +408,8 @@ function App() {
             {[
               { value: '6+', label: 'Proyek Selesai', color: 'from-teal-500 to-cyan-500' },
               { value: '8+', label: 'Sertifikat', color: 'from-cyan-500 to-blue-500' },
-              { value: '3+', label: 'Pengalaman Kerja', color: 'from-teal-500 to-emerald-500' },
-              { value: '4+', label: 'Tahun Belajar', color: 'from-cyan-500 to-teal-500' }
+              { value: '2+', label: 'Pengalaman Kerja', color: 'from-teal-500 to-emerald-500' },
+              { value: '2+', label: 'Tahun Belajar', color: 'from-cyan-500 to-teal-500' }
             ].map((stat, i) => (
               <div key={i} className="bg-zinc-800/60 p-4 rounded-xl text-center backdrop-blur-sm border border-white/10 hover:border-teal-500/30 transition-all hover:scale-105 duration-300 group">
                 <h3 className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent group-hover:scale-110 transition-transform`}>{stat.value}</h3>
