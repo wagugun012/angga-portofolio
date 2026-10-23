@@ -67,6 +67,7 @@ import Sertifikat5 from '/assets/sertifikat/anggact-cifo.pdf'
 import Sertifikat6 from '/assets/sertifikat/Junior-office.pdf'
 import Sertifikat7 from '/assets/sertifikat/junior-web.pdf'
 import Sertifikat8 from '/assets/sertifikat/junior-mobile.pdf'
+import Sertifikat9 from '/assets/sertifikat/Serti_quarter.pdf'
 
 // Thumbnail Sertifikat (import langsung)
 import ser1 from '/assets/sertifikat/serti1.png'
@@ -77,6 +78,7 @@ import ser5 from '/assets/sertifikat/serti5.png'
 import ser6 from '/assets/sertifikat/serti6.jpg'
 import ser7 from '/assets/sertifikat/serti7.png'
 import ser8 from '/assets/sertifikat/serti8.png'
+import ser9 from '/assets/sertifikat/serti9.png'
 
 export const listSertifikatImage = [
   { id: 1, gambar: ser1 },
@@ -87,6 +89,7 @@ export const listSertifikatImage = [
   { id: 6, gambar: ser6 },
   { id: 7, gambar: ser7 },
   { id: 8, gambar: ser8 },
+  { id: 9, gambar: ser9 },
 ]
 
 export const listSertifikat = [
@@ -98,10 +101,11 @@ export const listSertifikat = [
   { id: 6, gambar: Sertifikat6, thumbnail: ser6, nama: 'Sertifikat Junior Office', tanggal: '2025-01-22', dad: '700', tipe: 'pdf' },
   { id: 7, gambar: Sertifikat7, thumbnail: ser7, nama: 'Sertifikat Junior Web Developer', tanggal: '2025-03-07', dad: '800', tipe: 'pdf' },
   { id: 8, gambar: Sertifikat8, thumbnail: ser8, nama: 'Sertifikat Junior Mobile Developer', tanggal: '2025-06-25', dad: '900', tipe: 'pdf' },
+  { id: 9, gambar: Sertifikat9, thumbnail: ser9, nama: 'seminar Quarter Life Crisis', tanggal: '2025-07-10', dad: '1000', tipe: 'pdf' },
 ]
 
 // CV
-import curiculum1 from '/assets/sertifikat/cv_angga_cipta_triyana.pdf'
+import curiculum1 from '/assets/sertifikat/CV_Angga_Cipta_Triyana.pdf'
 export const listCv = [
   { id: 1, gambar: curiculum1, nama: 'Curriculum Vitae', dad: '100', tipe: 'pdf' },
 ]
@@ -117,6 +121,7 @@ import Project3 from '/assets/project/aplikasi-serbaguna.pdf'
 import Project4 from '/assets/project/password-manager.pdf'
 import Project5 from '/assets/project/pemesanan-menu.pdf'
 import Project6 from '/assets/project/pemesanan-menu-web.pdf'
+import Project7 from '/assets/project/pencatatan_keuangan.pdf'
 
 // Thumbnail Project (import langsung)
 import pro1 from '/assets/project/absensi.png'
@@ -125,6 +130,7 @@ import pro3 from '/assets/project/serbaguna.png'
 import pro4 from '/assets/project/passwordmanager.png'
 import pro5 from '/assets/project/apkpesanmenu.png'
 import pro6 from '/assets/project/pesanmenuweb.png'
+import pro7 from '/assets/project/pencatatan_keuangan.png'
 
 export const listProjectImage = [
   { id: 1, gambar: pro1 },
@@ -133,6 +139,7 @@ export const listProjectImage = [
   { id: 4, gambar: pro4 },
   { id: 5, gambar: pro5 },
   { id: 6, gambar: pro6 },
+  { id: 7, gambar: pro7 },
 ]
 
 export const listProject = [
@@ -189,7 +196,7 @@ export const listProject = [
     tanggal: '2025',
     dad: '600',
     tipe: 'pdf',
-    techStack: ['Kotlin', 'Firebase', 'Material Design']
+    techStack: ['Dart', 'Firebase', 'Material Design']
   },
   {
     id: 6,
@@ -202,4 +209,15 @@ export const listProject = [
     tipe: 'pdf',
     techStack: ['PHP', 'CodeIgniter', 'MySQL', 'Bootstrap']
   },
+  {
+    id: 7,
+    gambar: Project7,
+    thumbnail: pro7,
+    nama: 'Pencatatan Keuangan',
+    deskripsi: 'Aplikasi pencatatan keuangan pribadi dengan fitur laporan keuangan dan analisis bulanan.',
+    tanggal: '2025',
+    dad: '700',
+    tipe: 'pdf',
+    techStack: ['PHP', 'MySQL', 'Bootstrap']
+  }
 ]

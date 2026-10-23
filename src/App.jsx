@@ -312,7 +312,7 @@ function App() {
                     <h3 className="text-lg sm:text-xl font-bold text-teal-400">CV. Firman Jaya</h3>
                     <p className="text-zinc-300 mt-1">Bekerja | Bagian Staf Administrasi Gudang</p>
                   </div>
-                  <span className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">6 Feb 2023 - 27 Nov 2023</span>
+                  <span className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">6 Feb 2023 - 24 Jun 2023</span>
                 </div>
                 <ul className="mt-4 space-y-2 text-zinc-300 pl-5 text-sm">
                   <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan Pendataan Kendaraan yang kosong tidak ada muatan barang yang nantinya akan di isi oleh barang yang akan di kirim</li>
@@ -321,22 +321,6 @@ function App() {
                   <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pengecekan dokumen</li>
                   <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Membuat surat jalan</li>
                 <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Membuat dan mengarsipkan dokumen</li>
-                </ul>
-              </div>
-              <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all duration-300 hover:transform hover:-translate-y-1">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-teal-400">Dealpro Indonesia</h3>
-                    <p className="text-zinc-300 mt-1">Bekerja | Bagian IT Support</p>
-                  </div>
-                  <span className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">3 Sep 2024 - 29 Nov 2024</span>
-                </div>
-                <ul className="mt-4 space-y-2 text-zinc-300 pl-5 text-sm">
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Memberikan dukungan teknis terkait perangkat komputer, printer, dan perangkat IT lainnya</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan instalasi, konfigurasi, dan pengecekan perangkat komputer serta printer</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Membantu proses pencetakan dokumen sesuai kebutuhan Perusahaan</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pengecekan file dan menyesuaikan dokumen sebelum proses printing</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Membantu pekerjaan operasional lainnya yang berkaitan dengan IT dan percetakan</li>
                 </ul>
               </div>
               <div className="bg-zinc-800/70 p-6 rounded-xl border border-zinc-700/50 hover:border-teal-500/30 transition-all duration-300 hover:transform hover:-translate-y-1">
@@ -360,17 +344,14 @@ function App() {
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-teal-400">DWI PUTRA JAYA</h3>
-                    <p className="text-zinc-300 mt-1">Bekerja | Bagian Penjualan dan Keuangan</p>
+                    <p className="text-zinc-300 mt-1">Bekerja | Bagian Produksi dan Penjualan</p>
                   </div>
-                  <span className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">15 Sep 2025 - 31 Agt 2026</span>
+                  <span className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-400 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto">15 Sep 2025 - 31 Jul 2026</span>
                 </div>
                 <ul className="mt-4 space-y-2 text-zinc-300 pl-5 text-sm">
                   <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melayani dan mencatat transaksi penjualan kepada pelanggan</li>
                   <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pengecekan pesanan dan memastikan kesesuaian barang dengan permintaan pelanggan</li>
                   <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pencatatan dan pengecekan pembayaran pelanggan</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Mencatat transaksi pemasukan dan pengeluaran perusahaan</li>
-                  <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pengecekan pembayaran dan penerimaan dana</li>
-                <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Melakukan pengecekan kesesuaian data transaksi</li>
                 <li className="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-teal-400">Membantu memotong kertas dengan meggunakan mesin potong kertas</li>
                 </ul>
               </div>
@@ -614,60 +595,88 @@ function App() {
       </section>
 
       {/* ============================================= */}
-      {/* SERTIFIKAT SECTION */}
-      {/* ============================================= */}
-      <section id="sertifikat" className="relative z-10 py-24 px-6 md:px-12 lg:px-24">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up">
-              <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">Sertifikat & Penghargaan</span>
-            </h1>
-            <p className="text-lg text-zinc-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-              Berbagai sertifikat dan penghargaan yang telah saya dapatkan selama belajar dan bekerja.
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
-            {listSertifikat.map((sertifikat, index) => (
-              <div
-                key={sertifikat.id}
-                className="group bg-zinc-800/40 rounded-xl border border-white/10 hover:border-teal-500/50 overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 backdrop-blur-sm" 
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="bg-gradient-to-br from-white to-gray-100 p-8 flex items-center justify-center h-48 group-hover:scale-105 transition-transform duration-500">
-                  <img
-                    src={listSertifikatImage[index]?.gambar}
-                    alt="PDF Icon"
-                    className="w-32 h-auto object-contain"
-                    loading="lazy"
-                    onError={(e) => { e.target.src = 'https://via.placeholder.com/128x128?text=PDF'; }}
-                  />
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-teal-400 mb-2 truncate group-hover:text-teal-300 transition-colors">{sertifikat.nama}</h3>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="bg-zinc-700/50 text-zinc-300 px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
-                      <i className="ri-calendar-line text-teal-400"></i> {sertifikat.tanggal}
-                    </span>
-                    <span className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-xs font-medium">PDF</span>
-                  </div>
-                  <a
-                    href={sertifikat.gambar}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-teal-600 to-teal-500 hover:from-teal-500 hover:to-teal-400 text-white px-4 py-3 rounded-lg transition-all font-medium gap-2 group/btn"
-                  >
-                    <span>Lihat Sertifikat</span>
-                    <i className="ri-external-link-line group-hover/btn:translate-x-1 transition-transform"></i>
-                  </a>
-                </div>
+{/* SERTIFIKAT SECTION - DISAMAKAN DENGAN PROJECT */}
+{/* ============================================= */}
+<section id="sertifikat" className="relative z-10 py-24 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-transparent via-teal-500/5 to-transparent">
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-16">
+      <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+        Sertifikat & Penghargaan
+      </h1>
+      <p className="text-lg text-zinc-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
+        Berbagai sertifikat dan penghargaan yang telah saya dapatkan selama belajar dan bekerja.
+      </p>
+    </div>
+    
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+      {listSertifikat.map((sertifikat, index) => (
+        <div
+          key={sertifikat.id}
+          className="group bg-zinc-800/40 backdrop-blur-sm rounded-xl border border-white/10 hover:border-teal-500/50 overflow-hidden transition-all duration-300 hover:transform hover:-translate-y-2" 
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay={index * 100}
+          data-aos-once="true"
+        >
+          {/* Image Area - sama seperti project */}
+          <div className="relative h-48 overflow-hidden bg-gradient-to-br from-teal-500/20 to-cyan-500/20">
+            {sertifikat.tipe === 'pdf' ? (
+              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-white/10 to-white/5">
+                <img
+                  src={listSertifikatImage[index]?.gambar}
+                  alt="PDF Icon"
+                  className="w-32 h-auto object-contain group-hover:scale-110 transition-all duration-500"
+                  loading="lazy"
+                  onError={(e) => { e.target.src = 'https://via.placeholder.com/128x128?text=PDF'; }}
+                />
               </div>
-            ))}
+            ) : (
+              <img
+                src={listSertifikatImage[index]?.gambar || '/assets/placeholder.png'}
+                alt={sertifikat.nama}
+                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
+                loading="lazy"
+              />
+            )}
+            {/* Overlay gradient - sama seperti project */}
+            <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+          </div>
+
+          {/* Content Area - sama seperti project */}
+          <div className="p-6">
+            <div className="flex justify-between items-start mb-3">
+              <h3 className="text-xl font-bold text-teal-400 group-hover:text-teal-300 transition-colors line-clamp-1">
+                {sertifikat.nama}
+              </h3>
+              {sertifikat.tipe === 'pdf' && (
+                <span className="bg-red-500/10 text-red-400 px-2 py-1 rounded-lg text-xs font-medium flex-shrink-0 ml-2">
+                  PDF
+                </span>
+              )}
+            </div>
+            
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="bg-zinc-700/50 text-zinc-300 px-2 py-1 rounded-lg text-xs flex items-center gap-1">
+                <i className="ri-calendar-line text-teal-400"></i>
+                {sertifikat.tanggal}
+              </span>
+            </div>
+            
+            <a
+              href={sertifikat.gambar}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center w-full gap-2 bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white px-3 py-2 rounded-lg transition-all text-sm font-medium group-hover:shadow-lg group-hover:shadow-teal-500/25"
+            >
+              <span>Lihat Sertifikat</span>
+              <i className="ri-external-link-line group-hover:translate-x-1 transition-all"></i>
+            </a>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* ============================================= */}
       {/* KONTAK SECTION */}

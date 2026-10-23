@@ -43,6 +43,7 @@ const Navbar = () => {
   const navLinks = [
     { id: 'beranda', name: 'Beranda', href: '#beranda', icon: <FiHome /> },
     { id: 'tentang', name: 'Tentang', href: '#tentang', icon: <FiUser /> },
+    { id: 'projects', name: 'Project', href: '#projects', icon: <FiCode /> },
     { id: 'sertifikat', name: 'Sertifikat', href: '#sertifikat', icon: <FiAward /> },
     { id: 'kontak', name: 'Kontak', href: '#kontak', icon: <FiMail /> }
   ];
